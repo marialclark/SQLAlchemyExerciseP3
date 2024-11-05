@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.edit-user-form {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+.cancel-button {
+    background-color: #f44336;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+    text-decoration: none;
+}
+
+.button-form {
+    display: flex;
+    gap: 10px; 
+}
+
+.edit-btn, .delete-btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.edit-btn {
+    background-color: #007BFF; 
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
