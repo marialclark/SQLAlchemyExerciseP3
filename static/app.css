@@ -1,120 +1,283 @@
-* {
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+    --hover-primary: #45a049;
+    --hover-secondary: #d32f2f;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+  }
+  
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     padding: 20px;
-}
-
-h1 {
+  }
+  
+  h1 {
     color: black;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #333;
-}
-
-a {
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: var(--text-color);
+  }
+  
+  a {
     color: #0000EE;
     text-decoration: none;
-}
-
-a:hover {
+  }
+  
+  a:hover {
     text-decoration: underline;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background: #fff;
+  }
+  
+  ul {
+    padding: 0 20px;
+    list-style-type: disc;
+  }
+  
+  li {
     margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Form Styles */
-.edit-user-form {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
+  }
+  
+  .user-details {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .user-img {
+    margin-bottom: 20px;
+  }
+  
+  .user-img img {
+    max-width: 150px;
+  }
+  
+  .user-name h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .button-form {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .posts-div {
+    margin-top: 20px;
+  }
+  
+  .post-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .post-list li {
+    margin: 10px 0;
+  }
+  
+  .post-link {
+    color: var(--primary-color);
+    text-decoration: none;
     font-weight: bold;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #4CAF50; 
+  }
+  
+  .post-link:hover {
+    text-decoration: underline;
+  }
+  
+  .new-post-button {
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  button {
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049; 
-}
-
-.cancel-button {
-    background-color: #f44336;
-    padding: 10px 15px;
+  }
+  
+  button:hover {
+    background-color: var(--hover-primary);
+  }
+  
+  .delete-btn, .edit-btn {
+    background-color: var(--secondary-color);
     color: white;
+    padding: 10px 15px;
+    border: none;
     border-radius: 5px;
     font-size: 16px;
-    text-decoration: none;
-}
+    cursor: pointer;
+    display: inline-block;
+    width: 120px;
+  }
 
-.cancel-button:hover {
-    background-color: #d32f2f;
-    text-decoration: none;
-}
-
-.button-form {
-    display: flex;
-    gap: 10px; 
-}
-
-.edit-btn, .delete-btn {
-    padding: 10px 20px;
+  .cancel-btn-link {
+    background-color: var(--secondary-color);
     color: white;
+    padding: 5px 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline block;
+    width: 120px;
+    text-align: center; 
+  }
+  
+  .delete-btn:hover, .edit-btn:hover {
+    background-color: var(--hover-secondary);
+  }
+
+  .cancel-btn-link:hover {
+    text-decoration: none;
+    background-color: var(--hover-secondary);
+  }
+  
+  .add-post-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
     border: none;
     font-size: 16px;
     border-radius: 5px;
     text-decoration: none;
-}
-
-.edit-btn {
-    background-color: #007BFF; 
-}
-
-.edit-btn:hover {
+  }
+  
+  .add-post-btn:hover {
     background-color: #0056b3;
+  }
+  
+  .edit-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+  
+  .delete-btn:hover {
+    background-color: var(--hover-secondary);
+  }
+  
+  .list-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .lists {
+    margin-bottom: 15px;
+  }
+
+  .post-by {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+    width: 100%;
 }
 
-.delete-btn {
-    background-color: #f44336;
+.form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.delete-btn:hover {
-    background-color: #d32f2f;
+.form-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.save-edit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    width: 120px;
+}
+
+.save-edit-btn:hover {
+    background-color: var(--hover-primary);
+}
+  
+.add-btn-link {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+add-btn-link:hover {
+  background-color: var(--hover-primary);
+}
+
+.checkbox-container {
+  margin-bottom: 10px;
+}
+
+.tag-display {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.tag-display:hover {
+  background-color: var(--hover-primary);
+  text-decoration: none;
 }

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="post-details">
+  <div class="post-title">
+    <h1>{{ post.title }}</h1>
+  </div>
+
+  <div class="post-content">
+    <p>{{ post.content }}</p>
+  </div>
+
+  <div class="post-by">
+    <p><i>By {{ post.user.full_name }}</i></p>
+  </div>
+
+  {% if post.tags %}
+  <div class="tag-list">
+    <b>Tags:</b>
+    {% for tag in post.tags %}
+    <a href="/tags/{{ tag.id }}"><i class="tag-display">{{ tag.name }}</i></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="button-form">
+    <a href="/users/{{ post.user.id }}" class="cancel-btn-link">Cancel</a>
+
+    <form action="/posts/{{ post.id }}/edit" method="GET">
+      <button type="submit" class="edit-btn">Edit</button>
+    </form>
+    
+    <form action="/posts/{{ post.id }}/delete" method="POST">
+      <button type="submit" class="delete-btn">Delete</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
